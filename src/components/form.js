@@ -22,9 +22,9 @@ const Form = ({toggle=false})=>{
         </label>
         <br />
         <div className={`uk-flex`}>
-          <a className="uk-button uk-button-default">Linkedin</a>
-          <a className="uk-button uk-button-default uk-margin-left">Twitter</a>
-          <a className="uk-button uk-button-default uk-margin-left">Github</a>
+          <button className="uk-button uk-button-default">Linkedin</button>
+          <button className="uk-button uk-button-default uk-margin-left">Twitter</button>
+          <button className="uk-button uk-button-default uk-margin-left">Github</button>
         </div>
         <br />
         <label htmlFor="website">
