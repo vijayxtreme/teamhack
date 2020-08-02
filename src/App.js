@@ -70,7 +70,7 @@ function App() {
         <div className={`jumbotron`}>
           <h1>Join Team Hack!</h1>
           <p>A Hacking Community to Build Awesome Stuff!</p>
-            <p>by <a href="https://javascriptla.net" target="_blank">JavaScriptLA</a> & <a href="https://hackbuddy.com" target="_blank">Hackbuddy</a></p>
+            <p>by <a rel="noopener noreferrer" href="https://javascriptla.net" target="_blank">JavaScriptLA</a> & <a rel="noopener noreferrer" href="https://hackbuddy.com" target="_blank">Hackbuddy</a></p>
         </div>
 
         <p className={`uk-text-center`}><Submit /></p>
