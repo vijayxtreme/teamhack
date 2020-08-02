@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    @font-face {
+        font-family: 'SF Alien Encounters';
+        src: url('fonts/SFAlienEncounters.ttf');
+        font-style: normal;
+        font-weight: 500;
+    }
+    
+    @font-face {
+        font-family: 'SF Alien Encounters';
+        src: url('fonts/SFAlienEncounters-Italic.ttf');
+        font-style: italic;
+        font-weight: 500;
+    }
+    
+    @font-face {
+        font-family: 'SF Alien Encounters';
+        src: url('fonts/SFAlienEncountersSolid.ttf');
+        font-style: normal;
+        font-weight: 600;
+    }
+    
+    @font-face {
+        font-family: 'SF Alien Encounters';
+        src: url('fonts/SFAlienEncountersSolid-Ital.ttf');
+        font-style: italic;
+        font-weight: 600;
+    }
+    
+    html,
+    body {
+        font-size: 18px;
+    }
+    
+    .team-hack {
+        color: white;
+        padding-top: 15%;
+    }
+    
+    .team-hack h1,
+    .team-hack p {
+        color: inherit;
+    }
+    
+    .team-hack h1 {
+        font-family: "SF Alien Encounters";
+        font-size: 6rem;
+        font-weight: 500;
+        text-shadow: -5px -5px 0px #000, 5px -5px 0px #000, -5px 5px 0px #000, 5px 5px 0px #000;
+    }
+    
+    .team-hack-bg {
+        background: url('images/Team_hack_splash_mtp.jpg');
+        background-size: cover;
+        height: 80vh;
+        width: 100%;
+    }
+    
+    .team-hack button {
+        background-color: #fff;
+        color: #000;
+        font-weight: 700;
+        padding: 0rem 8rem;
+        box-sizing: border-box;
+        border-radius: 3px;
+    }
+    
+    .jumbotron {
+        background-color: #b333c5e3;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .jumbotron p:first-of-type {
+        font-style: italic;
+    }
+    
+    .jumbotron a {
+        color: inherit;
+    }
+    
+    .hb-modal {
+        position: fixed;
+        top: 0;
+        background: #000000d1;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .hb-form {
+        position: relative;
+        background: white;
+        overflow-y: scroll;
+        height: 80vh;
+        margin-top: 2rem;
+    }
+    
+    .close-btn {
+        background: none;
+        border: 0;
+        font-family: "SF Alien Encounters";
+        font-weight: 600;
+        font-size: 2rem;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        z-index: 10;
+        cursor: pointer;
+    }

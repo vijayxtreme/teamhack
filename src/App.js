@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Form from './components/form'
 import '../node_modules/uikit/dist/css/uikit.css';
-import teamhacksplash from './images/team_hack_splash.jpg'
+import './App.css';
 
 let ideas = [
   'Business Dashboard',
@@ -34,21 +34,50 @@ let techs = [
 ]
 
 
+
 function App() {
   let [toggle, setToggle] = useState(false)
+
+  useEffect(() => {
+    //componentDidMount
+    const hideModal = e => {
+      let modal = document.querySelector('.hb-form');
+      let targetElement = e.target;
+      do {
+        if(targetElement === modal){
+          return
+        }
+        targetElement = targetElement.parentNode;
+      }while(targetElement)
+      if(modal.style.display !== "none"){
+        setToggle(false)
+      }
+    }
+
+    document.body.addEventListener('click', hideModal)
+    return () => {
+      document.body.removeEventListener('click', hideModal)
+    }
+  })
+
 
   let Submit = () => (<button onClick={()=>setToggle(!toggle)} className={`uk-button uk-button-primary uk-button-large`}>Sign Up</button>)
 
   return (
     <>
-    <div className={`App uk-container-xlarge uk-align-center`}>
-      <div className={`uk-text-center uk-padding`} style={{background:`url(${teamhacksplash})`, backgroundSize:`100%`, height: `80vh`}}>
-        <h1 style={{color:`white`, paddingTop:`20rem`}}>Join Team Hack!</h1>
-        <p style={{color:`white`}}><em>A Hacking Community to Build Awesome Stuff!</em></p>
-        <p style={{color:`white`}}>by JavaScriptLA & Hackbuddy</p>
+    <div className={`App uk-align-center`}>
+      <div className={`uk-text-center team-hack-bg team-hack`} >
+        <div className={`jumbotron`}>
+          <h1>Join Team Hack!</h1>
+          <p>A Hacking Community to Build Awesome Stuff!</p>
+            <p>by <a href="https://javascriptla.net" target="_blank">JavaScriptLA</a> & <a href="https://hackbuddy.com" target="_blank">Hackbuddy</a></p>
+        </div>
+
+        <p className={`uk-text-center`}><Submit /></p>
       </div>
-      <p className={`uk-text-center`}><Submit /></p>
-      <Form toggle={toggle}/>
+
+      <div className={`hb-modal ${toggle ? '':'uk-hidden'}`}><Form toggle={toggle} setToggle={setToggle} /></div>
+      <div className={`uk-container uk-padding`}>
       <section>
         <h2>What's Team Hack you say?</h2>
         <p>A chance to join your meetup developer friends once a month to hack around some ideas / cool projects and in the process, (hopefully) improve your own programming skills.  Hey you might also improve your social skills too -- if nothing else at least have a few more friends to hang out with!</p>
@@ -66,23 +95,25 @@ function App() {
         <p>Here are some sample ideas:</p>
         <ul>
           {ideas.map((idea, i)=>{
-            return <li>{idea}</li>
+            return <li key={i}>{idea}</li>
           })}
         </ul>
         <p>Using some of these awesome technologies!</p>
         <ul>
           {techs.map((tech, i)=>{
-            return <li>{tech}</li>
+            return <li key={i}>{tech}</li>
           })}
         </ul>
       </section>
       <section>
         <h2>What Do I Need To Do Next?</h2>
         <p>Simply fill out the form to get an invite.  You'll need to be sure to add details about your current work profile, any projects you've done in the past and links to a portfolio, a github (either is fine).  If all looks good, you'll be hearing from us!</p>
+            <p className={`uk-text-center`}><Submit toggle={toggle} setToggle={setToggle} /></p>
       </section>
       <footer className={`uk-text-center uk-padding`}>
         Copyright &copy; {new Date().getFullYear()} JavaScriptLA.  HackBuddy&#8482; is a trademark of JavaScriptLA, LLC.  All rights reserved.
       </footer>
+      </div>
     </div>
     </>
   );
