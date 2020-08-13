@@ -15,10 +15,8 @@ const Form = ({setToggle})=>{
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         form.reset();
-        this.setState({ status: "SUCCESS" });
         setFormSubmitted(true);
       } else {
-        this.setState({ status: "ERROR" });
         alert('Sorry there was an error at this time processing your info')
       }
     };
