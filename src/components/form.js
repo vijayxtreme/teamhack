@@ -26,8 +26,9 @@ const Form = ({setToggle})=>{
 
   return (
     <form className={`hb-form uk-container-small uk-align-center uk-grid uk-padding`} onSubmit={submitForm} action="https://formspree.io/maypkpoj" method="POST">
-      <h2 className={`${formSubmitted ? '':'uk-hidden'}`}>Thanks for signing up!</h2>
+      <h2 className={`${formSubmitted ? '' : 'uk-hidden'} uk-text-center`}>Thanks for signing up!</h2>
       <button type="button" className={`close-btn`} onClick={()=>{setToggle(false)}}>X</button>
+      <div className={`${formSubmitted ? 'uk-hidden' : ''}`}>
       <h2 className={`uk-text-center`} style={{paddingBottom:`20px`}}>Sign Up</h2>
       <div className={`uk-flex uk-margin`}>
         <div className={`uk-width-1-2`}>
@@ -78,7 +79,7 @@ const Form = ({setToggle})=>{
         <br />
         <button className={`uk-align-center uk-button uk-button-large uk-button-primary`} type="submit">Submit</button>
       </div>
-
+      </div>
     </form>
   )
 }
