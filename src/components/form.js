@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const Form = ({setToggle})=>{
+  let [formSubmitted, setFormSubmitted] = useState(false)
+
   const submitForm = (e) => {
     e.preventDefault()
     const form = e.target;
@@ -14,8 +16,10 @@ const Form = ({setToggle})=>{
       if (xhr.status === 200) {
         form.reset();
         this.setState({ status: "SUCCESS" });
+        setFormSubmitted(true);
       } else {
         this.setState({ status: "ERROR" });
+        alert('Sorry there was an error at this time processing your info')
       }
     };
     xhr.send(data);
@@ -24,6 +28,7 @@ const Form = ({setToggle})=>{
 
   return (
     <form className={`hb-form uk-container-small uk-align-center uk-grid uk-padding`} onSubmit={submitForm} action="https://formspree.io/maypkpoj" method="POST">
+      <h2 className={`${formSubmitted ? '':'uk-hidden'}`}>Thanks for signing up!</h2>
       <button type="button" className={`close-btn`} onClick={()=>{setToggle(false)}}>X</button>
       <h2 className={`uk-text-center`} style={{paddingBottom:`20px`}}>Sign Up</h2>
       <div className={`uk-flex uk-margin`}>
