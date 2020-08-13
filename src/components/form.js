@@ -3,11 +3,25 @@ import React from 'react'
 const Form = ({setToggle})=>{
   const submitForm = (e) => {
     e.preventDefault()
-    console.log('form submit')
+    const form = e.target;
+    const data = new FormData(form)
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        this.setState({ status: "SUCCESS" });
+      } else {
+        this.setState({ status: "ERROR" });
+      }
+    };
+    xhr.send(data);
+
   }
 
   return (
-    <form className={`hb-form uk-container-small uk-align-center uk-grid uk-padding`} onSubmit={submitForm}>
+    <form className={`hb-form uk-container-small uk-align-center uk-grid uk-padding`} onSubmit={submitForm} action="https://formspree.io/maypkpoj" method="POST">
       <button type="button" className={`close-btn`} onClick={()=>{setToggle(false)}}>X</button>
       <h2 className={`uk-text-center`} style={{paddingBottom:`20px`}}>Sign Up</h2>
       <div className={`uk-flex uk-margin`}>
