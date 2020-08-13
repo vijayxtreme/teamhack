@@ -61,17 +61,17 @@ const Form = ({setToggle})=>{
       </div>
       <div>
         <h3>What technologies do you have experience with?</h3>
-        <textarea className={`uk-textarea`} placeholder="Your input" required></textarea>
+        <textarea className={`uk-textarea`} name="tech-exp" placeholder="Your input" required></textarea>
         <h3>What days / times are you available in the week?</h3>
-        <textarea className={`uk-textarea`} placeholder="Your input" required></textarea>
+        <textarea className={`uk-textarea`} name="availability" placeholder="Your input" required></textarea>
         <h3>Coolest thing you did in the last year (projects wise)?</h3>
-        <textarea className={`uk-textarea`} placeholder="Your input" required></textarea>
+        <textarea className={`uk-textarea`} name="coolest-thing" placeholder="Your input" required></textarea>
         <h3>What do you hope to get out of this group?</h3>
-        <textarea className={`uk-textarea`} placeholder="Your input" required></textarea>
+        <textarea className={`uk-textarea`} name="hope-wishes" placeholder="Your input" required></textarea>
         <h3>Where do you see yourself in five years?</h3>
-        <textarea className={`uk-textarea`} placeholder="Your input" required></textarea>
+        <textarea className={`uk-textarea`} name="five-years" placeholder="Your input" required></textarea>
         <h3>Any other comments?</h3>
-        <textarea className={`uk-textarea`} placeholder="Your input"></textarea>
+        <textarea className={`uk-textarea`} name="etc" placeholder="Your input"></textarea>
         <br />
         <button className={`uk-align-center uk-button uk-button-large uk-button-primary`} type="submit">Submit</button>
       </div>
