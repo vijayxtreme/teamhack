@@ -9,6 +9,7 @@
     "formik": "^2.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-github-btn": "^1.2.0",
     "react-scripts": "3.4.1",
     "uikit": "^3.5.5"
   },
