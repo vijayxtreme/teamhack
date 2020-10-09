@@ -72,7 +72,7 @@ function App() {
             <h1>Join Team Hack!</h1>
             <p>A Hacking Community to Build Awesome Stuff!</p>
             <p>by <a rel="noopener noreferrer" href="https://javascriptla.net" target="_blank">JavaScriptLA</a> & <a rel="noopener noreferrer" href="https://hackbuddy.com" target="_blank">Hackbuddy</a></p>
-            <p>Join Our <a rel="noopener noreferrer" href="https://github.com/team-hack" target="_blank">Team Hack</a></p>
+            <p>Join Our <a rel="noopener noreferrer" href="https://github.com/team-hack" target="_blank">GitHub Team</a></p>
           </div>
 
           <p className={`uk-text-center`}><Submit /></p>
