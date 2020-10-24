@@ -73,6 +73,9 @@ function App() {
             <p>A Hacking Community to Build Awesome Stuff!</p>
             <p>by <a rel="noopener noreferrer" href="https://javascriptla.net" target="_blank">JavaScriptLA</a> & <a rel="noopener noreferrer" href="https://hackbuddy.com" target="_blank">Hackbuddy</a></p>
             <p>Join Our <a rel="noopener noreferrer" href="https://github.com/team-hack" target="_blank">GitHub Team</a></p>
+            <p>
+              Watch Us On <a href="https://twitch.tv/hackbuddyorg" target="_blank" rel="noopener noreferrer">Twitch</a>
+            </p>
           </div>
 
           <p className={`uk-text-center`}><Submit /></p>
@@ -84,6 +87,9 @@ function App() {
             <h2>What's Team Hack you say?</h2>
             <p>
             <GitHubButton href="https://github.com/team-hack" data-size="large" aria-label="Follow @team-hack on GitHub">Follow @team-hack</GitHubButton>
+            </p>
+            <p>
+              Watch Us On <a href="https://twitch.tv/hackbuddyorg" target="_blank" rel="noopener noreferrer">Twitch</a>
             </p>
             <p>A chance to join your meetup developer friends once a month to hack around some ideas / cool projects and in the process, (hopefully) improve your own programming skills.  Hey you might also improve your social skills too -- if nothing else at least have a few more friends to hang out with!</p>
             <h2>How often are you doing this?</h2>
