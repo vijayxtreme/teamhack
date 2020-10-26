@@ -91,6 +91,9 @@ function App() {
             <p>
               Watch Us On <a href="https://twitch.tv/hackbuddyorg" target="_blank" rel="noopener noreferrer">Twitch</a>
             </p>
+            <p>
+              <a target="_blank" rel="noopener noreferrer" href="https://calendly.com/hackbuddy">Pair Program with Us</a> - Improve Your Own Interviewing skill.
+            </p>
             <p>A chance to join your meetup developer friends once a month to hack around some ideas / cool projects and in the process, (hopefully) improve your own programming skills.  Hey you might also improve your social skills too -- if nothing else at least have a few more friends to hang out with!</p>
             <h2>How often are you doing this?</h2>
             <p>The calendar is still being fleshed out, but the goal here is to meet at least 1x a month and the rest of the time work to create a project together remotely.  Given that normal hackathons are also under 48 hours, I think this is a good place to try building and practicing for the real deal for later.  That said, the aim of this group isn't to get you hackathon ready, but rather to just help foster creativity and learning.</p>
